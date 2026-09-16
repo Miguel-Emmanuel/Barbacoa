@@ -28,14 +28,23 @@
   let activeModalOpen = false;
 
   const IMAGE_ALIASES = {
-    "terraza-hero.png": ["IMG3.png", "terraza-hero.png", "LOGO.png"],
-    "terraza-bosque.png": ["IMG3.png", "terraza-bosque.png", "LOGO.png"],
-    "terraza-montana.png": ["IMG3.png", "terraza-montana.png", "LOGO.png"],
-    "cartel-inauguracion.png": ["IMG3.png", "cartel-sabados.png", "LOGO.png"],
-    "cartel-sabados.png": ["IMG3.png", "LOGO.png"],
+    "terraza-hero.png": ["3.jpeg", "IMG3.png", "terraza-hero.png"],
+    "terraza-bosque.png": ["2.jpeg", "IMG3.png", "terraza-bosque.png"],
+    "terraza-montana.png": ["1.jpeg", "IMG3.png", "terraza-montana.png"],
+    "cartel-inauguracion.png": ["INAUGURACION.png", "IMG3.png"],
+    "INAUGURACION.png": ["INAUGURACION.png", "IMG3.png"],
+    "cartel-sabados.png": ["INAUGURACION.png", "IMG3.png"],
     "logo-gemelos-ortega.png": ["LOGO.png"],
     "LOGO.png": ["LOGO.png"],
-    "IMG3.png": ["IMG3.png", "LOGO.png"]
+    "IMG3.png": ["IMG3.png", "3.jpeg", "LOGO.png"],
+    "1.jpeg": ["1.jpeg", "IMG3.png"],
+    "2.jpeg": ["2.jpeg", "IMG3.png"],
+    "3.jpeg": ["3.jpeg", "IMG3.png"],
+    "4.jpeg": ["4.jpeg", "IMG3.png"],
+    "5.jpeg": ["5.jpeg", "IMG3.png"],
+    "6.jpeg": ["6.jpeg", "IMG3.png"],
+    "7.jpeg": ["7.jpeg", "IMG3.png"],
+    "8.jpeg": ["8.jpeg", "IMG3.png"]
   };
 
   const fileNameOf = (src) => (src || "").split("/").pop().split("?")[0];
@@ -182,10 +191,12 @@
 
   const renderGallery = (category = "all") => {
     if (!galleryGrid) return;
+    const hiddenCategories = new Set(["menu", "clientes"]);
+    const visibles = galleryPhotos.filter((p) => !hiddenCategories.has(p.categoria));
     visiblePhotos =
       category === "all"
-        ? [...galleryPhotos]
-        : galleryPhotos.filter((p) => p.categoria === category);
+        ? [...visibles]
+        : visibles.filter((p) => p.categoria === category);
 
     galleryGrid.innerHTML = visiblePhotos
       .map(
@@ -342,16 +353,24 @@
 
   const FALLBACK_GALERIA = {
     fotos: [
-      { src: "assets/images/IMG3.png", alt: "Terraza con techo de teja", titulo: "Nuestra terraza", categoria: "lugar" },
-      { src: "assets/images/IMG3.png", alt: "Terraza entre el bosque", titulo: "Vista al bosque", categoria: "lugar" },
-      { src: "assets/images/LOGO.png", alt: "Horno a la leña", titulo: "Horno y leña", categoria: "lugar" },
-      { src: "assets/images/LOGO.png", alt: "Barbacoa de borrego", titulo: "Barbacoa de borrego", categoria: "menu" },
-      { src: "assets/images/IMG3.png", alt: "Antojitos en terraza", titulo: "Antojitos en la terraza", categoria: "menu" },
-      { src: "assets/images/IMG3.png", alt: "Comida al aire libre", titulo: "Comida al aire libre", categoria: "menu" },
-      { src: "assets/images/IMG3.png", alt: "Eventos", titulo: "Eventos en la terraza", categoria: "eventos" },
-      { src: "assets/images/LOGO.png", alt: "Marca", titulo: "Nuestra marca", categoria: "eventos" },
-      { src: "assets/images/IMG3.png", alt: "Clientes y paisaje", titulo: "Disfrutando el paisaje", categoria: "clientes" },
-      { src: "assets/images/IMG3.png", alt: "Reuniones", titulo: "Reuniones en familia", categoria: "clientes" }
+      { src: "assets/images/1.jpeg", alt: "Terraza", titulo: "Nuestra terraza", categoria: "lugar" },
+      { src: "assets/images/2.jpeg", alt: "Bosque", titulo: "Terraza al bosque", categoria: "lugar" },
+      { src: "assets/images/3.jpeg", alt: "Valle", titulo: "Vista al valle", categoria: "lugar" },
+      { src: "assets/images/4.jpeg", alt: "Montañas", titulo: "Entre montañas", categoria: "lugar" },
+      { src: "assets/images/5.jpeg", alt: "Ambiente", titulo: "Ambiente de montaña", categoria: "lugar" },
+      { src: "assets/images/IMG3.png", alt: "La Virgencita", titulo: "La Virgencita", categoria: "lugar" },
+      { src: "assets/images/8.jpeg", alt: "Mesas", titulo: "Mesas en la terraza", categoria: "menu" },
+      { src: "assets/images/3.jpeg", alt: "Comer afuera", titulo: "Comer al aire libre", categoria: "menu" },
+      { src: "assets/images/LOGO.png", alt: "Horno", titulo: "Barbacoa de horno", categoria: "menu" },
+      { src: "assets/images/2.jpeg", alt: "Antojitos", titulo: "Antojitos y terraza", categoria: "menu" },
+      { src: "assets/images/INAUGURACION.png", alt: "Inauguración", titulo: "Inauguración 20 de septiembre", categoria: "eventos" },
+      { src: "assets/images/6.jpeg", alt: "Evento", titulo: "Preparados para recibirte", categoria: "eventos" },
+      { src: "assets/images/7.jpeg", alt: "Inauguración terraza", titulo: "Día de inauguración", categoria: "eventos" },
+      { src: "assets/images/5.jpeg", alt: "Fiesta", titulo: "Fiesta en la montaña", categoria: "eventos" },
+      { src: "assets/images/8.jpeg", alt: "Familia", titulo: "Reuniones en familia", categoria: "clientes" },
+      { src: "assets/images/4.jpeg", alt: "Paisaje", titulo: "Disfrutando el paisaje", categoria: "clientes" },
+      { src: "assets/images/1.jpeg", alt: "Visita", titulo: "Ven a visitarnos", categoria: "clientes" },
+      { src: "assets/images/IMG3.png", alt: "Mesa", titulo: "Tu mesa te espera", categoria: "clientes" }
     ]
   };
 
@@ -361,13 +380,13 @@
         id: "inauguracion-terraza-2026",
         titulo: "Inauguración de nuestra terraza",
         etiqueta: "¡Evento Especial!",
-        fecha: "28 de Septiembre 2026",
-        hora: "9:00 AM",
+        fecha: "20 de Septiembre 2026",
+        hora: "8:00 a.m. – 1:00 p.m.",
         lugar: "Barbacoa La Virgencita",
-        descripcion: "Ven a disfrutar barbacoa de borrego de horno al aire libre.",
+        descripcion: "Inauguración con música en vivo, regalos y muchas sorpresas más. ¡No te lo pierdas!",
         descripcionCompleta:
-          "Te invitamos a la inauguración de nuestra terraza. Barbacoa de borrego de horno y el ambiente del bosque.",
-        imagen: "assets/images/IMG3.png",
+          "Te invitamos a la inauguración el domingo 20 de septiembre de 2026, de 8:00 a.m. a 1:00 p.m. Habrá música en vivo, regalos y otras cositas, además de barbacoa de borrego de horno.",
+        imagen: "assets/images/INAUGURACION.png",
         activo: true,
         mostrarEnModal: true,
         ctaTexto: "WhatsApp",
@@ -382,26 +401,11 @@
         lugar: "Barbacoa La Virgencita",
         descripcion: "Barbacoa de borrego de horno. Solo domingos de 8:00 a.m. a 1:00 p.m.",
         descripcionCompleta: "Carretera Toluca–Naucalpan Km 32.8.",
-        imagen: "assets/images/IMG3.png",
+        imagen: "assets/images/8.jpeg",
         activo: true,
         mostrarEnModal: false,
         ctaTexto: "Ver menú",
         ctaUrl: "#menu"
-      },
-      {
-        id: "musica-en-vivo",
-        titulo: "Música en vivo (próximamente)",
-        etiqueta: "¡Novedad!",
-        fecha: "Por anunciar",
-        hora: "Por confirmar",
-        lugar: "Barbacoa La Virgencita",
-        descripcion: "Pronto ambientaremos la terraza con música en vivo.",
-        descripcionCompleta: "Publicaremos fecha y horario aquí.",
-        imagen: "assets/images/LOGO.png",
-        activo: true,
-        mostrarEnModal: false,
-        ctaTexto: "WhatsApp",
-        ctaUrl: "https://wa.me/527226395654"
       }
     ]
   };

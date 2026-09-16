@@ -7,63 +7,111 @@
   ],
   "fotos": [
     {
-      "src": "assets/images/IMG3.png",
-      "alt": "Terraza de madera con techo de teja roja",
+      "src": "assets/images/1.jpeg",
+      "alt": "Estructura de madera de la terraza",
       "titulo": "Nuestra terraza",
       "categoria": "lugar"
     },
     {
-      "src": "assets/images/IMG3.png",
-      "alt": "Terraza entre el bosque y las montañas",
-      "titulo": "Vista al bosque",
+      "src": "assets/images/2.jpeg",
+      "alt": "Terraza con techo rojo y bosque",
+      "titulo": "Terraza al bosque",
       "categoria": "lugar"
     },
     {
-      "src": "assets/images/LOGO.png",
-      "alt": "Horno a la leña Gemelos Ortega",
-      "titulo": "Horno y leña",
+      "src": "assets/images/3.jpeg",
+      "alt": "Terraza con mesas y vista al valle",
+      "titulo": "Vista al valle",
       "categoria": "lugar"
+    },
+    {
+      "src": "assets/images/4.jpeg",
+      "alt": "Terraza abierta entre montañas",
+      "titulo": "Entre montañas",
+      "categoria": "lugar"
+    },
+    {
+      "src": "assets/images/5.jpeg",
+      "alt": "Terraza con cielo y bosque",
+      "titulo": "Ambiente de montaña",
+      "categoria": "lugar"
+    },
+    {
+      "src": "assets/images/IMG3.png",
+      "alt": "Terraza Barbacoa La Virgencita",
+      "titulo": "La Virgencita",
+      "categoria": "lugar"
+    },
+    {
+      "src": "assets/images/8.jpeg",
+      "alt": "Mesas listas para comer",
+      "titulo": "Mesas en la terraza",
+      "categoria": "menu"
+    },
+    {
+      "src": "assets/images/3.jpeg",
+      "alt": "Espacio para disfrutar la barbacoa",
+      "titulo": "Comer al aire libre",
+      "categoria": "menu"
     },
     {
       "src": "assets/images/LOGO.png",
       "alt": "Barbacoa de borrego de horno",
-      "titulo": "Barbacoa de borrego",
+      "titulo": "Barbacoa de horno",
       "categoria": "menu"
     },
     {
-      "src": "assets/images/IMG3.png",
-      "alt": "Ambiente para disfrutar antojitos",
-      "titulo": "Antojitos en la terraza",
+      "src": "assets/images/2.jpeg",
+      "alt": "Ambiente para antojitos",
+      "titulo": "Antojitos y terraza",
       "categoria": "menu"
     },
     {
-      "src": "assets/images/IMG3.png",
-      "alt": "Espacio para comer al aire libre",
-      "titulo": "Comida al aire libre",
-      "categoria": "menu"
-    },
-    {
-      "src": "assets/images/IMG3.png",
-      "alt": "Cartel e inauguración de la terraza",
-      "titulo": "Eventos en la terraza",
+      "src": "assets/images/INAUGURACION.png",
+      "alt": "Inauguración de la terraza",
+      "titulo": "Inauguración 20 de septiembre",
       "categoria": "eventos"
     },
     {
-      "src": "assets/images/LOGO.png",
-      "alt": "Gemelos Ortega",
-      "titulo": "Nuestra marca",
+      "src": "assets/images/6.jpeg",
+      "alt": "Terraza lista para el evento",
+      "titulo": "Preparados para recibirte",
       "categoria": "eventos"
     },
     {
-      "src": "assets/images/IMG3.png",
-      "alt": "Reuniones en la terraza",
+      "src": "assets/images/7.jpeg",
+      "alt": "Terraza y bosque para la inauguración",
+      "titulo": "Día de inauguración",
+      "categoria": "eventos"
+    },
+    {
+      "src": "assets/images/5.jpeg",
+      "alt": "Ambiente festivo en la terraza",
+      "titulo": "Fiesta en la montaña",
+      "categoria": "eventos"
+    },
+    {
+      "src": "assets/images/8.jpeg",
+      "alt": "Reuniones en familia en la terraza",
       "titulo": "Reuniones en familia",
       "categoria": "clientes"
     },
     {
-      "src": "assets/images/IMG3.png",
-      "alt": "Clientes disfrutando el paisaje",
+      "src": "assets/images/4.jpeg",
+      "alt": "Disfrutar el paisaje",
       "titulo": "Disfrutando el paisaje",
+      "categoria": "clientes"
+    },
+    {
+      "src": "assets/images/1.jpeg",
+      "alt": "Visita a la terraza",
+      "titulo": "Ven a visitarnos",
+      "categoria": "clientes"
+    },
+    {
+      "src": "assets/images/IMG3.png",
+      "alt": "Ambiente de la terraza",
+      "titulo": "Tu mesa te espera",
       "categoria": "clientes"
     }
   ]
