@@ -1,0 +1,70 @@
+{
+  "categorias": [
+    { "id": "lugar", "label": "Nuestro Lugar" },
+    { "id": "menu", "label": "Nuestro Menú" },
+    { "id": "eventos", "label": "Eventos y Novedades" },
+    { "id": "clientes", "label": "Nuestros Clientes" }
+  ],
+  "fotos": [
+    {
+      "src": "assets/images/IMG3.png",
+      "alt": "Terraza de madera con techo de teja roja",
+      "titulo": "Nuestra terraza",
+      "categoria": "lugar"
+    },
+    {
+      "src": "assets/images/IMG3.png",
+      "alt": "Terraza entre el bosque y las montañas",
+      "titulo": "Vista al bosque",
+      "categoria": "lugar"
+    },
+    {
+      "src": "assets/images/LOGO.png",
+      "alt": "Horno a la leña Gemelos Ortega",
+      "titulo": "Horno y leña",
+      "categoria": "lugar"
+    },
+    {
+      "src": "assets/images/LOGO.png",
+      "alt": "Barbacoa de borrego de horno",
+      "titulo": "Barbacoa de borrego",
+      "categoria": "menu"
+    },
+    {
+      "src": "assets/images/IMG3.png",
+      "alt": "Ambiente para disfrutar antojitos",
+      "titulo": "Antojitos en la terraza",
+      "categoria": "menu"
+    },
+    {
+      "src": "assets/images/IMG3.png",
+      "alt": "Espacio para comer al aire libre",
+      "titulo": "Comida al aire libre",
+      "categoria": "menu"
+    },
+    {
+      "src": "assets/images/IMG3.png",
+      "alt": "Cartel e inauguración de la terraza",
+      "titulo": "Eventos en la terraza",
+      "categoria": "eventos"
+    },
+    {
+      "src": "assets/images/LOGO.png",
+      "alt": "Gemelos Ortega",
+      "titulo": "Nuestra marca",
+      "categoria": "eventos"
+    },
+    {
+      "src": "assets/images/IMG3.png",
+      "alt": "Reuniones en la terraza",
+      "titulo": "Reuniones en familia",
+      "categoria": "clientes"
+    },
+    {
+      "src": "assets/images/IMG3.png",
+      "alt": "Clientes disfrutando el paisaje",
+      "titulo": "Disfrutando el paisaje",
+      "categoria": "clientes"
+    }
+  ]
+}

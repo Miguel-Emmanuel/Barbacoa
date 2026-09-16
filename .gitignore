@@ -1,0 +1,30 @@
+# Dependencies / build
+node_modules/
+.dist/
+dist/
+build/
+.cache/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+Desktop.ini
+.vscode/
+.idea/
+
+# Env / secrets
+.env
+.env.*
+!.env.example
+
+# Temp / local only
+*.log
+*.tmp
+.keep
+test-write.txt
+js/images-data.js
+js/chunks/
+b64/
+
+# Large / duplicate cursor cache paths (keep real assets)
+site/
