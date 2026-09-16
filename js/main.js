@@ -140,7 +140,7 @@
     tab.addEventListener("click", () => {
       const category = tab.dataset.category;
       const tabs = document.querySelectorAll(".menu-tab[data-category]");
-      const items = document.querySelectorAll(".menu-item");
+      const items = document.querySelectorAll("#menuGrid > [data-category]");
       tabs.forEach((t) => {
         t.classList.toggle("is-active", t === tab);
         t.setAttribute("aria-selected", String(t === tab));
